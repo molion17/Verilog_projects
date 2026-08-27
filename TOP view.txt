@@ -1,0 +1,195 @@
+
+# time=0 | P_input= 00000000 | V_in=0 | rst= 0 | P_en= 0 | P_bit= 0 | Tx_out= 1 | busy=0
+run
+# time=23000 | P_input= 01010101 | V_in=1 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 1 | busy=0
+# time=30000 | P_input= 01010101 | V_in=1 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 0 | busy=0
+# time=33000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 0 | busy=0
+run
+# time=50000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 0 | busy=1
+run
+# time=70000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 1 | busy=1
+run
+# time=90000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 0 | busy=1
+run
+# time=110000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 1 | busy=1
+run
+# time=130000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 0 | busy=1
+run
+# time=150000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 1 | busy=1
+run
+# time=170000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 0 | busy=1
+run
+# time=190000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 1 | busy=1
+run
+# time=210000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 0 | busy=1
+run
+# time=230000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 1 | busy=1
+run
+run
+# time=270000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 0 | Tx_out= 1 | busy=0
+run
+# time=283000 | P_input= 01010101 | V_in=1 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 1 | busy=0
+# time=290000 | P_input= 01010101 | V_in=1 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 0 | busy=0
+# time=293000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 0 | busy=0
+run
+# time=310000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 0 | busy=1
+run
+# time=330000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 1 | busy=1
+run
+# time=350000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 0 | busy=1
+run
+# time=370000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 1 | busy=1
+run
+# time=390000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 0 | busy=1
+run
+# time=410000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 1 | busy=1
+run
+# time=430000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 0 | busy=1
+run
+# time=450000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 1 | busy=1
+run
+# time=470000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 0 | busy=1
+run
+run
+# time=510000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 0 | Tx_out= 1 | busy=1
+run
+# time=523000 | P_input= 01010101 | V_in=1 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=1
+# time=530000 | P_input= 01010101 | V_in=1 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=1
+# time=533000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+run
+# time=570000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=590000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=610000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=630000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=650000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=670000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=690000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=710000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=730000 | P_input= 01010101 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+run
+# time=773000 | P_input= 00000000 | V_in=1 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=790000 | P_input= 00000000 | V_in=1 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=0
+# time=793000 | P_input= 00000000 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=0
+run
+# time=810000 | P_input= 00000000 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# time=990000 | P_input= 00000000 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+run
+run
+# time=1050000 | P_input= 00000000 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=0
+# time=1053000 | P_input= 10000000 | V_in=1 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=0
+run
+# time=1070000 | P_input= 10000000 | V_in=1 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=0
+# time=1073000 | P_input= 10000000 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=0
+run
+# time=1090000 | P_input= 10000000 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+run
+run
+run
+run
+# time=1193000 | P_input= 00000001 | V_in=1 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+run
+run
+# time=1250000 | P_input= 00000001 | V_in=1 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=1270000 | P_input= 00000001 | V_in=1 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=1
+# time=1273000 | P_input= 00000001 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=1290000 | P_input= 00000001 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+run
+# time=1330000 | P_input= 00000001 | V_in=0 | rst= 1 | P_en= 1 | P_bit= 1 | Tx_out= 1 | busy=0
+run
+run
+# time=1373000 | P_input= 10010101 | V_in=1 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=0
+run
+# time=1390000 | P_input= 10010101 | V_in=1 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=0
+# time=1393000 | P_input= 10010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=0
+run
+# time=1410000 | P_input= 10010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=1430000 | P_input= 10010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=1450000 | P_input= 10010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=1470000 | P_input= 10010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=1490000 | P_input= 10010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=1510000 | P_input= 10010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=1530000 | P_input= 10010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+run
+# time=1570000 | P_input= 10010101 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+run
+# time=1613000 | P_input= 01011001 | V_in=1 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=1630000 | P_input= 01011001 | V_in=1 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=0
+# time=1633000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=0
+run
+# time=1650000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=1670000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=1690000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+run
+# time=1730000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+run
+# time=1770000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=1790000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=1810000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=1830000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=1853000 | P_input= 01011001 | V_in=1 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=1870000 | P_input= 01011001 | V_in=1 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=0
+# time=1873000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=0
+run
+# time=1890000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+# time=1910000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+run
+# time=1930000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 0 | busy=1
+run
+run
+# time=1970000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=1
+# time=1973000 | P_input= 01011001 | V_in=0 | rst= 0 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=0
+run
+# time=1993000 | P_input= 01011001 | V_in=0 | rst= 1 | P_en= 0 | P_bit= 1 | Tx_out= 1 | busy=0
+run
+run
+run
+run
+run
+run
+# ** Note: $finish    : D:/Learning/UART project/TX/modelsim/TX_tb.v(86)
+#    Time: 2113 ns  Iteration: 0  Instance: /UART_TX_tb
