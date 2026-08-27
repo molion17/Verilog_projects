@@ -1,0 +1,17 @@
+# time=0 | P_input= 00000000 | rst= 0 | load= 0 | P_bit= 0 | parity_out=0 
+run
+# time=23000 | P_input= 01001000 | rst= 1 | load= 1 | P_bit= 0 | parity_out=0 
+# time=33000 | P_input= 01001000 | rst= 1 | load= 0 | P_bit= 0 | parity_out=0 
+run
+# time=43000 | P_input= 01001000 | rst= 1 | load= 1 | P_bit= 1 | parity_out=0 
+# time=50000 | P_input= 01001000 | rst= 1 | load= 1 | P_bit= 1 | parity_out=1 
+# time=53000 | P_input= 01001000 | rst= 1 | load= 0 | P_bit= 1 | parity_out=1 
+run
+run
+# time=83000 | P_input= 11101010 | rst= 1 | load= 1 | P_bit= 0 | parity_out=1 
+# time=93000 | P_input= 11101010 | rst= 1 | load= 1 | P_bit= 1 | parity_out=1 
+run
+# time=110000 | P_input= 11101010 | rst= 1 | load= 1 | P_bit= 1 | parity_out=0 
+# ** Note: $finish    : D:/Learning/UART project/TX/modelsim/parity_tb.v(43)
+#    Time: 113 ns  Iteration: 0  Instance: /Parity_bit_calc_tb
+# 1
