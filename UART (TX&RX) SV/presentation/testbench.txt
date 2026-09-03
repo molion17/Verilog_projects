@@ -1,0 +1,83 @@
+   Time: 0 ps  Iteration: 0  Instance: /uart_grading_tb
+# === 1) random data, P_EN=0 ===
+# ok[0]: d=0x24 pe=0 fe=0
+# ok[1]: d=0x81 pe=0 fe=0
+# ok[2]: d=0x09 pe=0 fe=0
+# ok[3]: d=0x63 pe=0 fe=0
+# ok[4]: d=0x0d pe=0 fe=0
+# ok[5]: d=0x8d pe=0 fe=0
+# ok[6]: d=0x65 pe=0 fe=0
+# ok[7]: d=0x12 pe=0 fe=0
+# ok[8]: d=0x01 pe=0 fe=0
+# ok[9]: d=0x0d pe=0 fe=0
+# ok[10]: d=0x76 pe=0 fe=0
+# ok[11]: d=0x3d pe=0 fe=0
+# ok[12]: d=0xed pe=0 fe=0
+# ok[13]: d=0x8c pe=0 fe=0
+# ok[14]: d=0xf9 pe=0 fe=0
+# ok[15]: d=0xc6 pe=0 fe=0
+# ok[16]: d=0xc5 pe=0 fe=0
+# ok[17]: d=0xaa pe=0 fe=0
+# ok[18]: d=0xe5 pe=0 fe=0
+# ok[19]: d=0x77 pe=0 fe=0
+# === 2) random data, P_EN=1 P_BIT=0 (even) ===
+# ok[20]: d=0x12 pe=0 fe=0
+# ok[21]: d=0x8f pe=0 fe=0
+# ok[22]: d=0xf2 pe=0 fe=0
+# ok[23]: d=0xce pe=0 fe=0
+# ok[24]: d=0xe8 pe=0 fe=0
+# ok[25]: d=0xc5 pe=0 fe=0
+# ok[26]: d=0x5c pe=0 fe=0
+# ok[27]: d=0xbd pe=0 fe=0
+# ok[28]: d=0x2d pe=0 fe=0
+# ok[29]: d=0x65 pe=0 fe=0
+# ok[30]: d=0x63 pe=0 fe=0
+# ok[31]: d=0x0a pe=0 fe=0
+# ok[32]: d=0x80 pe=0 fe=0
+# ok[33]: d=0x20 pe=0 fe=0
+# ok[34]: d=0xaa pe=0 fe=0
+# ok[35]: d=0x9d pe=0 fe=0
+# ok[36]: d=0x96 pe=0 fe=0
+# ok[37]: d=0x13 pe=0 fe=0
+# ok[38]: d=0x0d pe=0 fe=0
+# ok[39]: d=0x53 pe=0 fe=0
+# === 3) random data, P_EN=1 P_BIT=1 (odd) ===
+# ok[40]: d=0x6b pe=0 fe=0
+# ok[41]: d=0xd5 pe=0 fe=0
+# ok[42]: d=0x02 pe=0 fe=0
+# ok[43]: d=0xae pe=0 fe=0
+# ok[44]: d=0x1d pe=0 fe=0
+# ok[45]: d=0xcf pe=0 fe=0
+# ok[46]: d=0x23 pe=0 fe=0
+# ok[47]: d=0x0a pe=0 fe=0
+# ok[48]: d=0xca pe=0 fe=0
+# ok[49]: d=0x3c pe=0 fe=0
+# ok[50]: d=0xf2 pe=0 fe=0
+# ok[51]: d=0x8a pe=0 fe=0
+# ok[52]: d=0x41 pe=0 fe=0
+# ok[53]: d=0xd8 pe=0 fe=0
+# ok[54]: d=0x78 pe=0 fe=0
+# ok[55]: d=0x89 pe=0 fe=0
+# ok[56]: d=0xeb pe=0 fe=0
+# ok[57]: d=0xb6 pe=0 fe=0
+# ok[58]: d=0xc6 pe=0 fe=0
+# ok[59]: d=0xae pe=0 fe=0
+# === 4) injected parity error ===
+# ok[60]: d=0xc3 pe=1 fe=0
+# === 5) injected framing error ===
+# ok[61]: d=0x5c pe=0 fe=1
+# === 6) back-to-back frames ===
+# ok[62]: d=0xa5 pe=0 fe=0
+# ok[63]: d=0x5a pe=0 fe=0
+# ok[64]: d=0xff pe=0 fe=0
+# === 7) busy-reject ===
+# ok[65]: d=0x39 pe=0 fe=0
+# 
+# frames sent      : 66
+# frames delivered : 66
+# unexpected frames: 0
+# SCORE 66 66
+# GRADING: 66 / 66 frames correct
+# RESULT: PASS
+# ** Note: $finish    : D:/Learning/UART project/RX&TX/modelsim/uart_loopback_tb.sv(279)
+#    Time: 8150 ns  Iteration: 1  Instance: /uart_grading_tb
