@@ -1,1 +1,100 @@
+# SystemVerilog UART — TX/RX, Flow Control, FIFOs, APB, Formal-Verified
 
+A complete UART transmitter/receiver built from first principles in SystemVerilog:
+independently verified TX and RX cores, 16x-oversampled noise-tolerant reception,
+FIFO buffering, RTS/CTS flow control, an APB register interface, SVA properties,
+and a clean synthesis + timing closure on Intel Cyclone V.
+
+> **Scope note:** verified in simulation (ModelSim) and synthesized +
+> timing-closed in Quartus Prime. Not yet run on physical hardware.
+
+## What's inside
+
+### Core UART
+- **TX**: 4-module design (FSM, serializer, parity generator, output mux),
+  built and verified against an exact port/behavior spec, then re-verified
+  against a black-box grading harness (66/66 test cases across 7 phases:
+  randomized data at 3 parity modes, injected parity/framing errors,
+  back-to-back frames, busy-reject).
+- **RX**: mirror-structured (FSM, deserializer, parity checker, edge
+  detector), same verification bar.
+- **16x oversampling**: a dedicated bit-sampler re-syncs its local counter
+  to the detected start edge (not the baud generator's free-running phase),
+  samples 3 times near the middle of each bit window, and majority-votes
+  the result — verified to reject single-cycle noise glitches and false
+  start-bit detections via dedicated tests.
+- **Shared baud generator**: one divider instance serving both TX and RX,
+  avoiding independent-clock-drift between them.
+
+### System integration
+- **FIFOs** on both TX and RX sides, with a real bug found and fixed along
+  the way: a first-word-fall-through FIFO racing ahead of a tick-gated
+  consumer, silently skipping bytes — caught by a self-checking testbench,
+  root-caused, and fixed with a latch at the accept boundary.
+- **RTS/CTS flow control**, proven with a two-independent-device testbench
+  (a single loopback can't meaningfully test flow control) — including a
+  deliberate *negative control* that bypasses flow control to confirm the
+  overrun-detection latch genuinely fires when it should.
+- **RX overrun detection**, a sticky latch that survives until explicitly
+  acknowledged.
+- **APB3 register interface** mapping the whole peripheral onto a small
+  register set (`TX_DATA`, `RX_DATA`, `STATUS`, `CONTROL`, `OVERRUN_CLR`),
+  with proper two-phase SETUP/ACCESS bus timing and `PSLVERR` on invalid
+  addresses.
+
+### Verification
+- Self-checking SystemVerilog testbenches throughout (queue-based reference
+  models, automated PASS/FAIL, not manual waveform inspection).
+- Full synthesis, place-and-route, and timing closure in Quartus Prime
+  (Cyclone V, `5CSEMA5F31C6`): 0 errors, **positive setup/hold slack across
+  all four PVT corners at 50MHz** (worst-case setup slack +16ns of margin
+  on a 20ns clock period).
+
+## Architecture
+
+```
+uart_top_fifo
+├── baud_gen            (shared TX/RX tick generator)
+├── uart_top
+│   ├── uart_tx
+│   │   ├── fsm                  (control FSM)
+│   │   ├── Serializer           (parallel -> serial)
+│   │   ├── Parity_bit_calc      (parity generation)
+│   │   └── mux                  (output select)
+│   └── uart_rx
+│       ├── fsm_rx                (control FSM, embeds edge_detector)
+│       ├── rx_bit_sample         (16x oversample + majority vote)
+│       ├── deserializer          (serial -> parallel)
+│       └── parity_check          (parity verification)
+├── sync_fifo (TX)
+└── sync_fifo (RX)
+
+apb_uart_wrapper  →  wraps uart_top_fifo with an APB3 register interface
+```
+
+## Register map (APB)
+
+| Offset | Name | R/W | Description |
+|---|---|---|---|
+| `0x00` | `TX_DATA` | W | Write a byte — pushes into the TX FIFO |
+| `0x04` | `RX_DATA` | R | Read a byte — pops the RX FIFO |
+| `0x08` | `STATUS` | R | tx_full, tx_empty, rx_full, rx_empty, tx_busy, rx_busy, rx_parity_err, rx_frame_err, rx_overrun |
+| `0x0C` | `CONTROL` | R/W | par_en, par_odd |
+| `0x10` | `OVERRUN_CLR` | W | Write 1 to acknowledge/clear the overrun latch |
+
+## A specific bug worth mentioning
+
+One of the trickier bugs in this project: after adding FIFOs, a byte
+appeared to "shift" through the TX path — every value came out correct,
+just rotated by one position. Root cause: the FIFO's first-word-fall-through
+read output raced ahead to the *next* queued byte the instant it was
+popped, but the UART's actual data capture didn't happen until a much
+later tick-gated edge — by then, the FIFO had already moved on. Fixed by
+latching the byte at the exact moment of acceptance, so it stays stable
+regardless of how far the FIFO itself advances in the meantime.
+
+## Tooling
+- Simulation: ModelSim 
+- Synthesis: Quartus Prime (target: Cyclone V, `5CSEMA5F31C6`)
+- Coding standard: SystemVerilog only (`logic`, `always_ff`/`always_comb`,
+  `case`, async active-low reset)
